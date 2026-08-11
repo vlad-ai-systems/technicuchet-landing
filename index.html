@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Техник-Учет — программа для учета заказов зубных техников. Без облаков, локальное хранение, офлайн работа.">
+  <title>Техник-Учет — учет заказов без облаков</title>
+
+  <!-- Google Fonts: Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <header class="hero">
+    <div class="glow glow--top"></div>
+    <div class="glow glow--bottom"></div>
+
+    <nav class="nav">
+      <a href="#" class="nav__logo" aria-label="Техник-Учет — на главную">
+        <span class="nav__logo-mark"></span>
+        Техник-Учет
+      </a>
+      <a href="#features" class="nav__link">Возможности</a>
+      <a href="#privacy" class="nav__link">Безопасность</a>
+    </nav>
+
+    <div class="hero__content">
+      <p class="hero__badge">Для зубных техников и лабораторий</p>
+      <h1 class="hero__title">Учет заказов <span class="gradient-text">без облаков.</span><br>Навсегда ваш.</h1>
+      <p class="hero__subtitle">
+        Все данные о заказах, пациентах и работах хранятся только на вашем компьютере.
+        Никаких облаков, никакой передачи данных третьим лицам. Офлайн и конфиденциально.
+      </p>
+      <a href="https://t.me/technik_uchet_bot" target="_blank" rel="noopener" class="btn btn--primary">Скачать демо</a>
+      <p class="hero__hint">Бесплатная демо-версия · Без регистрации</p>
+    </div>
+  </header>
+
+  <!-- ═══════════ БОЛЬ vs РЕШЕНИЕ ═══════════ -->
+  <main>
+    <section class="section compare" id="features">
+      <div class="section__head">
+        <h2 class="section__title">Хватит тонуть в Excel</h2>
+        <p class="section__subtitle">Сравните, как вы ведёте учёт сейчас — и как будет с Техник-Учетом</p>
+      </div>
+
+      <div class="compare__grid">
+        <article class="card card--bad">
+          <h3 class="card__title">Excel / Тетрадь</h3>
+          <ul class="card__list">
+            <li>Формулы ломаются, файлы теряются</li>
+            <li>Никакого контроля сроков и этапов</li>
+            <li>Нет статусов — «где заказ?» по телефону</li>
+            <li>Ручной подсчёт зарплаты и выручки</li>
+            <li>Один файл на всех — хаос и конфликты</li>
+          </ul>
+        </article>
+
+        <article class="card card--good">
+          <h3 class="card__title">Техник-Учет</h3>
+          <ul class="card__list">
+            <li>Заказы, этапы и сроки — под контролем</li>
+            <li>Автоматический расчёт стоимости и прибыли</li>
+            <li>Один клик — и статус заказа обновлён</li>
+            <li>Данные хранятся локально, только у вас</li>
+            <li>Работает офлайн, даже без интернета</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════ БЕЗОПАСНОСТЬ ═══════════ -->
+    <section class="section security" id="privacy">
+      <div class="section__head">
+        <h2 class="section__title">Данные под вашим контролем</h2>
+        <p class="section__subtitle">Никаких серверов, облаков и утечек. Только ваш компьютер.</p>
+      </div>
+
+      <div class="security__grid">
+        <div class="feature">
+          <div class="feature__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2l7 3v6c0 5-3.5 9-7 11-3.5-2-7-6-7-11V5z"/>
+              <path d="M9 12l2 2 4-4"/>
+            </svg>
+          </div>
+          <h3 class="feature__title">Привязка к оборудованию</h3>
+          <p class="feature__text">Лицензия защищена HWID — привязана к вашему компьютеру. Копировать и передавать базу бессмысленно.</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 12l4-5 5 7 4-3 5 5"/>
+              <path d="M3 12v6a2 2 0 002 2h14a2 2 0 002-2v-6"/>
+            </svg>
+          </div>
+          <h3 class="feature__title">Локальное хранение</h3>
+          <p class="feature__text">База заказов лежит только на вашем диске. Никто не имеет к ней доступа — ни мы, ни облака.</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="6" y="6" width="12" height="12" rx="3"/>
+              <path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/>
+            </svg>
+          </div>
+          <h3 class="feature__title">Полная офлайн-работа</h3>
+          <p class="feature__text">Интернет не нужен вовсе. Работайте в лаборатории хоть в подвале — учёт не остановится.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__info">
+        <span class="footer__logo">Техник-Учет</span>
+        <p class="footer__text">Программное обеспечение для учёта заказов зубных техников.</p>
+      </div>
+      <div class="footer__contacts">
+        <a href="https://t.me/technik_uchet" target="_blank" rel="noopener" class="footer__link">
+          Telegram — @technik_uchet
+        </a>
+        <a href="https://t.me/technik_uchet_bot" target="_blank" rel="noopener" class="footer__link">
+          Техподдержка — бот
+        </a>
+      </div>
+    </div>
+    <p class="footer__copy">© 2026 Техник-Учет. Все права защищены.</p>
+  </footer>
+
+</body>
+</html>
