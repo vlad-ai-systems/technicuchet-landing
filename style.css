@@ -111,10 +111,16 @@ a {
   left: 0;
   right: 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 16px;
   padding: 20px 24px;
+}
+
+.nav__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .nav__logo {
@@ -124,6 +130,14 @@ a {
   font-weight: 800;
   font-size: 1.05rem;
   letter-spacing: 0.02em;
+}
+
+.nav__brand-sub {
+  padding-left: 22px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--cyan);
+  white-space: nowrap;
 }
 
 .nav__logo-mark {
@@ -149,23 +163,7 @@ a {
 /* ─────────── Hero-контент ─────────── */
 .hero__content {
   max-width: 720px;
-  padding-top: 72px;
-}
-
-.hero__badge {
-  display: inline-block;
-  padding: 8px 18px;
-  margin-bottom: 22px;
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--cyan);
-  background: var(--glass);
-  border: 1px solid var(--glass-border);
-  border-radius: 100px;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  padding-top: 100px;
 }
 
 .hero__title {
@@ -185,9 +183,12 @@ a {
 
 .hero__hint {
   margin-top: 18px;
-  font-size: 0.85rem;
-  color: var(--text-dim);
-  opacity: 0.8;
+  font-size: clamp(1rem, 2.4vw, 1.2rem);
+  font-weight: 600;
+  background: linear-gradient(90deg, var(--pink), #ff4d4d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 /* ═══════════════ КНОПКИ ═══════════════ */
@@ -281,17 +282,53 @@ a {
   margin: 0 auto;
 }
 
+.section__subtitle--gradient {
+  font-size: clamp(1.15rem, 3vw, 1.45rem);
+  font-weight: 600;
+  background: linear-gradient(90deg, var(--cyan), var(--pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 /* ═══════════════ СРАВНЕНИЕ ═══════════════ */
 .compare__grid {
   display: grid;
-  gap: 20px;
+  gap: 36px;
   grid-template-columns: 1fr;
 }
 
-@media (min-width: 820px) {
-  .compare__grid {
-    grid-template-columns: 1fr 1fr;
+.card--bad {
+  margin: 0 48px 0 0;
+}
+
+.card--good {
+  margin: 0 0 0 48px;
+}
+
+@media (max-width: 640px) {
+  .card--bad,
+  .card--good {
+    margin: 0;
   }
+}
+
+/* ─────────── Слоган ─────────── */
+.slogan {
+  margin: 24px auto 0;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, var(--cyan), var(--pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.slogan__accent {
+  white-space: nowrap;
 }
 
 .card {
@@ -360,9 +397,69 @@ a {
   box-shadow: 0 0 8px rgba(255, 92, 138, 0.6);
 }
 
+.card--bad {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  gap: 24px;
+  overflow: hidden;
+}
+
+.card--bad__media {
+  display: flex;
+  margin: -32px -28px -32px 0;
+}
+
+.card--bad__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 640px) {
+  .card--bad {
+    grid-template-columns: 1fr;
+  }
+
+  .card--bad__media {
+    margin: -24px -28px -32px;
+  }
+}
+
 .card--good .card__list li::before {
   background: radial-gradient(circle, var(--cyan), transparent 70%);
   box-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
+}
+
+.card--good {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  gap: 24px;
+  overflow: hidden;
+}
+
+.card--good__media {
+  display: flex;
+  margin: -32px 0 -32px -28px;
+}
+
+.card--good__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 640px) {
+  .card--good {
+    grid-template-columns: 1fr;
+  }
+
+  .card--good__media {
+    margin: -32px -28px 0;
+  }
 }
 
 /* ═══════════════ БЕЗОПАСНОСТЬ ═══════════════ */
