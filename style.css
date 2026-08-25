@@ -533,6 +533,59 @@ a {
   color: var(--text-dim);
 }
 
+/* ═══════════════ ОБЗОР ПРИЛОЖЕНИЯ ═══════════════ */
+.overview__shots {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.shot {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.shot__img {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.shot__desc {
+  color: #ffffff;
+  font-size: 0.98rem;
+}
+
+.shot__heading {
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.shot__heading--big {
+  font-size: 1.55rem;
+  font-weight: 900;
+}
+
+.shot__desc p {
+  margin-bottom: 10px;
+}
+
+.shot__desc ul {
+  margin: 0 0 12px 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.shot__desc li {
+  color: #ffffff;
+}
+
 /* ═══════════════ FOOTER ═══════════════ */
 .footer {
   margin-top: 40px;
