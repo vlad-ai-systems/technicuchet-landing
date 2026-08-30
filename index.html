@@ -242,5 +242,47 @@
     <p class="footer__copy">© 2026 Техник-Учет. Все права защищены.</p>
   </footer>
 
+  <!-- ═══════════ ЗАПРОС ЛИЦЕНЗИИ ═══════════ -->
+  <section id="order-form" style="padding: 60px 20px; background: #f8f9fa; text-align: center;">
+    <h2 style="margin-bottom: 10px;">🔑 Запросить лицензию</h2>
+    <p style="margin-bottom: 30px; color: #666;">HWID подставится автоматически. Прикрепите чек об оплате.</p>
+
+    <form action="https://formspree.io/f/xyeyzrap" method="POST" enctype="multipart/form-data"
+          style="max-width: 500px; margin: 0 auto; text-align: left;">
+
+      <label for="hwid" style="display:block; margin-bottom: 5px; font-weight: bold;">HWID компьютера:</label>
+      <input type="text" id="hwid" name="hwid" readonly required
+             placeholder="Ожидание..."
+             style="width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 6px; background: #e9ecef; font-family: monospace;">
+
+      <label for="receipt" style="display:block; margin-bottom: 5px; font-weight: bold;">Чек об оплате (скриншот/PDF):</label>
+      <input type="file" id="receipt" name="receipt" accept="image/*,.pdf" required
+             style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 6px;">
+
+      <input type="text" name="_gotcha" style="display:none">
+
+      <button type="submit"
+              style="width: 100%; padding: 14px; background: #28a745; color: white; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background 0.3s;">
+        Отправить заявку
+      </button>
+    </form>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const hwid = urlParams.get('hwid');
+      const hwidInput = document.getElementById('hwid');
+
+      if (hwid && hwidInput) {
+        hwidInput.value = hwid;
+        document.getElementById('order-form').scrollIntoView({ behavior: 'smooth' });
+      } else if (hwidInput) {
+        hwidInput.placeholder = "Не удалось получить HWID. Введите вручную или откройте ссылку из приложения.";
+        hwidInput.removeAttribute('readonly');
+      }
+    });
+  </script>
+
 </body>
 </html>
